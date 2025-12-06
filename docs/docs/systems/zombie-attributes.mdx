@@ -1,0 +1,68 @@
+---
+title: "🔢 Zombie Attributes"
+description: "Modify zombie behavior in UndeadPandemic using attributes like speed, damage, health, knockback resistance, intelligence, and armour. Tailor zombies for challenging gameplay."
+---
+
+# 🔢 Zombie Attributes
+
+This page details the zombie attributes that can be modified in the `config.yml` file.
+
+---
+
+### Speed
+
+- Determines how quickly zombies move when attacking the player.  
+- **Idle movement speed** (when not engaged) remains unaffected.  
+- **Vanilla zombie speed:** `0.23`  
+- Recommended maximum: `1.0` (ensures zombies can catch up without causing lag)  
+- If no value is set, the plugin will assign a default speed.
+
+---
+
+### Damage
+
+- Determines how much damage zombies deal to players or other entities.  
+- **Vanilla zombie damage:** `2.0` (default player health is `20.0`).
+
+---
+
+### Health
+
+- Determines the zombies' health points.  
+- **Vanilla zombie health:** `20.0`
+
+---
+
+### Knockback Resistance
+
+- Determines how resistant zombies are to knockback from player attacks and explosions.  
+- Can be affected by weapon enchantments, including bows and arrows.  
+- **Vanilla zombie knockback resistance:** `0.0`  
+- Maximum allowed: `1.0` (zombies will not be affected by attacks or explosions if set to `1.0`).
+
+---
+
+### isStupid
+
+- Determines if the zombie may forget the player and target another entity.  
+- Zombies may wander confused if this is enabled.
+
+---
+
+### wearArmour
+
+- Allows zombies to wear armour and equips enchantments.  
+- Supported items: `helmet`, `chestplate`, `leggings`, `boots`.  
+
+**Example configuration for a full set with enchants:**
+
+```yaml
+wearArmour:
+  helmet: 'LEATHER_HELMET'
+  chestplate: 'LEATHER_CHESTPLATE;DURABILITY:3;PROTECTION_FIRE:1'
+  leggings: 'LEATHER_LEGGINGS'
+  boots: 'LEATHER_BOOTS'
+
+wearArmour:
+  helmet: 'LEATHER_HELMET'
+```

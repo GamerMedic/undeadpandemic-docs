@@ -1,30 +1,35 @@
-/**
- * Any CSS included here will be global. The classic template
- * bundles Infima by default. Infima is a CSS framework designed to
- * work well for content-centric websites.
- */
-
-/* You can override the default Infima variables here. */
+/* Global overrides for light mode */
 :root {
-  --ifm-color-primary: #2e8555;
-  --ifm-color-primary-dark: #29784c;
-  --ifm-color-primary-darker: #277148;
-  --ifm-color-primary-darkest: #205d3b;
-  --ifm-color-primary-light: #33925d;
-  --ifm-color-primary-lighter: #359962;
-  --ifm-color-primary-lightest: #3cad6e;
-  --ifm-code-font-size: 95%;
-  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+  --ifm-color-primary: #c03;            /* Primary accent (red) */
+  --ifm-color-primary-dark: #a02828;    /* Darker red for hover/buttons */
+  --ifm-color-primary-darker: #802020;  /* Even darker */
+  --ifm-color-primary-darkest: #5c1818; /* Darkest red */
+  --ifm-color-primary-light: #e14a4a;   /* Lighter red */
+  --ifm-color-primary-lighter: #eb6e6e;
+  --ifm-color-primary-lightest: #f08a8a;
+
+  --ifm-color-secondary: #e9850f;       /* Secondary accent (yellow/orange) */
+  --ifm-color-secondary-dark: #cc7a0c;
+  --ifm-color-secondary-darker: #aa620a;
+  --ifm-color-secondary-light: #f0a33d;
+  --ifm-color-secondary-lighter: #f3b565;
+  --ifm-color-secondary-lightest: #f7c68b;
 }
 
-/* For readability concerns, you should choose a lighter palette in dark mode. */
+/* Dark mode palette */
 [data-theme='dark'] {
-  --ifm-color-primary: #25c2a0;
-  --ifm-color-primary-dark: #21af90;
-  --ifm-color-primary-darker: #1fa588;
-  --ifm-color-primary-darkest: #1a8870;
-  --ifm-color-primary-light: #29d5b0;
-  --ifm-color-primary-lighter: #32d8b4;
-  --ifm-color-primary-lightest: #4fddbf;
-  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+  --ifm-color-primary: #ff5555;         /* Bright red for dark mode */
+  --ifm-color-primary-dark: #dd4444;
+  --ifm-color-primary-darker: #bb3333;
+  --ifm-color-primary-darkest: #992222;
+  --ifm-color-primary-light: #ff7777;
+  --ifm-color-primary-lighter: #ff9999;
+  --ifm-color-primary-lightest: #ffbaba;
+
+  --ifm-color-secondary: #f5a623;       /* Yellow/orange accent for dark mode */
+  --ifm-color-secondary-dark: #d98c1f;
+  --ifm-color-secondary-darker: #b3741b;
+  --ifm-color-secondary-light: #f7b14d;
+  --ifm-color-secondary-lighter: #f9c078;
+  --ifm-color-secondary-lightest: #fbd19f;
 }

@@ -15,8 +15,12 @@ const config = {
   organizationName: 'undeadpandemic',
   projectName: 'undeadpandemic-docs',
 
-  onBrokenLinks: 'warn',
-  onBrokenMarkdownLinks: 'warn',
+  onBrokenLinks: 'warn', // stays at top level
+  markdown: {
+    hooks: {
+      onBrokenMarkdownLinks: 'warn',
+    },
+  },
 
   i18n: { defaultLocale: 'en', locales: ['en'] },
 
@@ -24,7 +28,10 @@ const config = {
     [
       'classic',
       ({
-        docs: { sidebarPath: require.resolve('./sidebars.js') },
+        docs: {
+          sidebarPath: require.resolve('./sidebars.js'),
+          routeBasePath: '/',
+        },
         blog: false, // disable default blog
         theme: { customCss: require.resolve('./src/css/custom.css') },
       }),
@@ -36,12 +43,14 @@ const config = {
       '@docusaurus/plugin-content-blog',
       {
         id: 'changelogs',
-        routeBasePath: 'changelogs', // URL path
-        path: 'changelogs',          // folder location
-        showReadingTime: true,
-        blogTitle: 'Changelogs',
-        blogDescription: 'All UndeadPandemic plugin changelogs',
-        postsPerPage: 10,
+        routeBasePath: 'changelogs',
+        path: './changelogs',
+        blogTitle: 'UndeadPandemic Changelogs',
+        blogDescription: 'All updates, fixes and releases.',
+        showReadingTime: false,
+        postsPerPage: 'ALL',
+        blogSidebarTitle: 'All Versions',
+        blogSidebarCount: 'ALL',
       },
     ],
   ],
@@ -52,13 +61,13 @@ const config = {
 
     navbar: {
       title: 'UndeadPandemic Docs',
-      logo: { alt: 'UndeadPandemic Logo', src: 'img/logo.svg' },
+      logo: { alt: 'UndeadPandemic Logo', src: 'img/new-undeadpandemic-logo-compressed.webp' },
       items: [
         {
           type: 'docSidebar',
           sidebarId: 'tutorialSidebar',
           position: 'left',
-          label: 'Tutorial',
+          label: 'Docs',
         },
         {
           to: '/changelogs',  // <- updated to blog-style changelogs
@@ -73,7 +82,7 @@ const config = {
       links: [
         {
           title: 'Docs',
-          items: [{ label: 'Documentation', to: '/docs/intro' }],
+          items: [{ label: 'Documentation', to: '/installation' }],
         },
         {
           title: 'Community',
